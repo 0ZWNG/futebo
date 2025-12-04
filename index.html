@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>League Fantástica - Portal Oficial</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+    }
+
+    header {
+      background: #1d3557;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 26px;
+    }
+
+    nav {
+      background: #457b9d;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+    }
+
+    nav button {
+      background: #1d3557;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 6px;
+    }
+
+    nav button:hover {
+      background: #0f253e;
+    }
+
+    /* Botões sociais */
+    .social-buttons {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-buttons a {
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .whatsapp { background: #25d366; }
+    .facebook { background: #1877f2; }
+
+    .whatsapp:hover { background: #1cae52; }
+    .facebook:hover { background: #0e5fc4; }
+
+    section {
+      padding: 25px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .time {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .patrocinadores img {
+      width: 150px;
+      margin: 10px;
+    }
+
+    footer {
+      background: #1d3557;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 25px;
+    }
+  </style>
+
+  <script>
+    function mostrar(secao) {
+      document.querySelectorAll("section").forEach(s => s.classList.remove("active"));
+      document.getElementById(secao).classList.add("active");
+    }
+  </script>
+
+</head>
+<body>
+
+<header>
+  League Fantástica – Portal Oficial
+</header>
+
+<nav>
+  <button onclick="mostrar('home')">🏠 Home</button>
+  <button onclick="mostrar('jogo')">⚽ Jogo + Patrocinadores</button>
+  <button onclick="mostrar('formulario')">📝 Formulário</button>
+</nav>
+
+<!-- BOTÕES DE WHATSAPP E FACEBOOK -->
+<div class="social-buttons">
+  <a class="whatsapp" href="https://wa.me/5500000000000" target="_blank">📱 WhatsApp</a>
+  <a class="facebook" href="https://facebook.com" target="_blank">📘 Facebook</a>
+</div>
+
+<!-- HOME -->
+<section id="home" class="active">
+  <h2>Times Ficcionais</h2>
+
+  <div class="time">
+    <h3>1️⃣ Dragões do Norte</h3>
+    <p>Um time forte, tradicional e conhecido por sua defesa compacta.</p>
+    <strong>Jogadores:</strong>
+    <ul>
+      <li>Mateus “Chama” Costa</li>
+      <li>Marcos Rocha</li>
+      <li>Jorge Ferraz</li>
+      <li>Lucas Magno</li>
+    </ul>
+  </div>
+
+  <div class="time">
+    <h3>2️⃣ Leões Imperiais</h3>
+    <p>Equipe técnica, habilidosa e famosa por passes precisos.</p>
+    <strong>Jogadores:</strong>
+    <ul>
+      <li>Gavriel “Rei” Silva</li>
+      <li>João Guarda</li>
+      <li>Vinicius Rocha</li>
+      <li>Yuri Cortez</li>
+    </ul>
+  </div>
+</section>
+
+<!-- JOGO -->
+<section id="jogo">
+  <h2>Assista ao Jogo Oficial</h2>
+  <p>Assista abaixo à partida completa:</p>
+
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; background: #000;">
+    <iframe 
+      src="https://www.youtube.com/embed/2S2XktqKhJA" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+      style="position: absolute; top:0; left: 0; width: 100%; height: 100%;">
+    </iframe>
+  </div>
+
+  <h3>Patrocinadores Oficiais</h3>
+  <div class="patrocinadores">
+    <img src="https://via.placeholder.com/150x80?text=Hyper+Sport" alt="Hyper Sport">
+    <img src="https://via.placeholder.com/150x80?text=Galaxy+Drink" alt="Galaxy Drink">
+    <img src="https://via.placeholder.com/150x80?text=Max+Energy" alt="Max Energy">
+  </div>
+</section>
+
+<!-- FORMULÁRIO -->
+<section id="formulario">
+  <h2>Votação: Melhor Jogador</h2>
+  <p>Responda diretamente no formulário abaixo:</p>
+
+  <iframe 
+    src="https://docs.google.com/forms/d/e/1FAIpQLScdHie3rkXbGWU2MliwaOVnPzC1rMH8HP38N532IQQYXDfH5w/viewform?embedded=true" 
+    width="100%" 
+    height="900" 
+    frameborder="0"
+    marginheight="0"
+    marginwidth="0">
+    Carregando…
+  </iframe>
+</section>
+
+<footer>
+  © 2025 League Fantástica – Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
